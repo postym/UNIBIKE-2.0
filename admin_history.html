@@ -61,11 +61,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="/admin_index.html" class="nav-item nav-link">Home</a>
+                        <a href="#home" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
-                       
+                        
                         <a href="/admin_bikes.html" class="nav-item nav-link">Bikes</a>
-                        <a href="#review" class="nav-item nav-link">Community</a>
+                        <a href="/admin_community.html" class="nav-item nav-link">Community</a>
                         <a href="/admin_gps_tracker.html" class="nav-item nav-link">Track Bike</a>
                     </div>
                 </div>
@@ -74,138 +74,43 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <div class="navbar-nav ms-auto">
-                                <div class="profile-button" onclick="goBack()">
-                                    <img src="img/back.png" alt="Back" class="avatar">
+                                <div class="profile-button" onclick="toggleDropdown()">
+                                    <img src="/img/mitch1.JPG" alt="Avatar" class="avatar">
                                 </div>
-                            </div>
-                                      
+                                <div class="dropdown-menu" id="dropdownMenu">
+                                    <div class="dropdown-item"><a href="/admin_profile.html" style="color: #495057;">My Profile</a></div>
+                                    <div class="dropdown-item"><a href="/admin_profile.html" style="color: #495057;">Rent History</a></div>
+                                    <div class="dropdown-item"><a href="/admin_index.html" style="color: #495057;">Settings</a></div>
+                                    <div class="dropdown-item"><a href="/admin_index.html" style="color: #495057;">Logout</a></div>
+                                </div>
+                            </div>           
                     </ul>
                     
                 <script>
-                    function goBack() {
-                    window.history.back();
-                }
+                    function toggleDropdown() {
+                        const dropdownMenu = document.getElementById('dropdownMenu');
+                        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    }
                 </script>
-
             </nav>
 
-            <div class>
-
+            <div class="container mt-5" id="historyTable">
+                <h2>Booking History</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Date</th>
+                            <th>Duration</th>
+                            <th>Point A</th>
+                            <th>Point B</th>
+                            <th>Scanned ID</th> <!-- New column for Scanned ID -->
+                        </tr>
+                    </thead>
+                    <tbody id="transactionHistory">
+                    </tbody>
+                </table>
             </div>
-
-                    <!--CHatbot-->
-                <script>
-                    window.embeddedChatbotConfig = {
-                    chatbotId: "IIBo9uVglmfIlhYwSFBFC",
-                    domain: "www.chatbase.co"
-                    }
-                    </script>
-                    <script
-                    src="https://www.chatbase.co/embed.min.js"
-                    chatbotId="IIBo9uVglmfIlhYwSFBFC"
-                    domain="www.chatbase.co"
-                    defer>
-                    </script>
-                    <!--CHatbot-->
-
-            <div class="container-xxl bg-primary hero-header">
-            </div>
-           
-        <div id="myProfile">
-            <img src="img/mitch1.JPG" alt="Profile Picture" class="profile-img">
-        </div>    
-        
-         <div class="container" id="details">
-            <div class="container" id="namebelow">
-                <br><br><br><br><br><br><br><br>
-                <h3>Michelle Malto</h3>
-                <p style="margin-top: -40px;">Admin</p>
-
-                <!-- <div class="container-fluid" id="ach">
-
-                    <div class="container text-center" style="margin-bottom: -28px;">
-                        <div class="row">
-                          <div class="col order-last" style="width: 100px;">
-                            <h6>Coins: 50</h6>
-                            <p style="font-size: 12.8px; text-align: left; margin-top: -7px; margin-left: 17px;"><a href=""style="color: #3eb489;">Redeem</a></p>
-                          </div>
-                          <div class="col">
-                          </div>
-                          <div class="col order-first" style="width: 100px;">
-                            <h6>Points: 100</h6>
-                            <p style="font-size: 12.8px; text-align: left; margin-top: -7px; margin-left: 2px;">100BP= 5UBC</p>
-                          </div>
-                        </div>
-                      </div>
-              
-                    <div class="progress-container">
-                        
-                    
-                        Milestone 1
-                        <div class="milestone" style="left: 10%;">
-                            <div class="milestone-icon">
-                                <img src="img/coin.gif" alt="10km" />
-                            </div>
-                            <div class="milestone-label">10km</div>
-                        </div>
-                    
-                        Milestone 2
-                        <div class="milestone" style="left: 30%;">
-                            <div class="milestone-icon">
-                                <img src="img/coin.gif" alt="25km" />
-                            </div>
-                            <div class="milestone-label">25km</div>
-                        </div>
-                    
-                        Milestone 3
-                        <div class="milestone" style="left: 50%;">
-                            <div class="milestone-icon">
-                                <img src="img/coin.gif" alt="50km" />
-                            </div>
-                            <div class="milestone-label">50km</div>
-                        </div>
-                    
-                        Milestone 4
-                        <div class="milestone" style="left: 70%;">
-                            <div class="milestone-icon">
-                                <img src="img/coin.gif" alt="75km" />
-                            </div>
-                            <div class="milestone-label">75km</div>
-                        </div>
-                    
-                        Milestone 5
-                        <div class="milestone" style="left: 90%;">
-                            <div class="milestone-icon">
-                                <img src="img/coin.gif" alt="100km" />
-                            </div>
-                            <div class="milestone-label">100km</div>
-                        </div>
-
-                      
-                    </div>
-                    </div> -->
-                    <br>
-                    <br>
-                    
-                <!-- </div>
-                <div class="container" id="progpad">
-                <div class="progress-bar" id="progressBar"></div>
-                </div>
-                <div class="end-icon" style="left: 100%;">
-                    <img src="img/progressbike.png" alt="End Icon" class="end-icon-img">
-                </div>
-                <h6 style="margin-top: 20px;text-align: left; margin-left: 75px; margin-top: 5px;">Distance traveled: 50.2km</h6>
-                <p style="font-size: 13px; margin-top: 55px ; margin-bottom: -5px;">Bike to earn coins and redeem exclusive rewards.</p>
-                <a href="info.html" style="font-size: 13px; color: #3eb489;" ><i><u>Learn more</u></i></a> -->
-
-            </div>
-            
-         </div> 
-
-         
-        
-        
-        
 
         <!-- Footer Start -->
         <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
@@ -246,4 +151,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html>        
